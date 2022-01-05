@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:textAlignment="center"
+    tools:context=".MainActivity">"
+
+
+    <Button
+        android:id="@+id/ResetButton"
+        android:layout_width="122dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#000000"
+        android:onClick="resetOnClick"
+        android:text="@string/reset"
+        android:visibility="gone"
+        app:iconTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.944"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DiagramImage"
+        app:layout_constraintVertical_bias="0.95"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/CalculateButton"
+        android:layout_width="122dp"
+        android:layout_height="50dp"
+        android:onClick="calculateOnClick"
+        android:text="@string/calculate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.944"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CharacteristicsText"
+        app:layout_constraintVertical_bias="0.945" />
+
+    <ImageView
+        android:id="@+id/DiagramImage"
+        android:layout_width="393dp"
+        android:layout_height="207dp"
+        android:backgroundTint="#BFBFBF"
+        android:src="@drawable/countersink"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.108"
+        tools:layout_editor_absoluteX="9dp" />
+
+    <TextView
+        android:id="@+id/outOfTolerance"
+        android:layout_width="296dp"
+        android:layout_height="22dp"
+        android:text="@string/out_of_tolerance"
+        android:textAlignment="viewStart"
+        android:textColor="#BF000000"
+        android:textStyle="italic"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/finalResultTextLayout"
+        app:layout_constraintTop_toBottomOf="@+id/DiagramImage"
+        app:layout_constraintVertical_bias="0.719"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/CharacteristicsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/countersink_details"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.085"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DiagramImage"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <TextView
+        android:id="@+id/finalResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/finalResult"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.064"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/MeasurementDetailsText"
+        app:layout_constraintVertical_bias="0.281"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/MeasurementDetailsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/measurement"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.066"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CharacteristicsText"
+        app:layout_constraintVertical_bias="0.199" />
+
+    <TextView
+        android:id="@+id/TopNoteText"
+        android:layout_width="349dp"
+        android:layout_height="34dp"
+        android:text="@string/info"
+        android:textAlignment="center"
+        android:textSize="13sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/DiagramImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.695" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/plusTextLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="115dp"
+        android:layout_height="64dp"
+        android:hint="@string/plus"
+        android:inputType="numberDecimal|numberSigned"
+        android:orientation="vertical"
+        app:errorContentDescription="Required"
+        app:errorEnabled="false"
+        app:errorTextColor="@color/design_default_color_error"
+        app:hintAnimationEnabled="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DiagramImage"
+        app:layout_constraintVertical_bias="0.104">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/plusInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:baselineAligned="false"
+            android:imeOptions="actionDone"
+            android:inputType="numberDecimal|numberSigned"
+            android:paddingBottom="15dp"
+            android:textAlignment="textStart" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/finalResultTextLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="115dp"
+        android:layout_height="64dp"
+        android:inputType="numberDecimal|numberSigned"
+        android:orientation="vertical"
+        android:visibility="gone"
+
+        app:hintAnimationEnabled="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.054"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DiagramImage"
+        app:layout_constraintVertical_bias="0.635"
+        tools:visibility="visible">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/finalResultText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:baselineAligned="false"
+            android:imeOptions="actionDone"
+            android:inputType="numberDecimal|numberSigned"
+            android:paddingBottom="12dp"
+            android:textAlignment="textStart"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/minusTextLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="115dp"
+        android:layout_height="64dp"
+        android:layout_marginEnd="10dp"
+        android:hint="@string/minus"
+        android:inputType="numberDecimal|numberSigned"
+        android:orientation="vertical"
+        app:errorContentDescription="Required"
+        app:errorEnabled="false"
+        app:errorTextColor="@color/design_default_color_error"
+        app:hintAnimationEnabled="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.739"
+        app:layout_constraintStart_toEndOf="@+id/plusTextLayout"
+        app:layout_constraintTop_toBottomOf="@+id/DiagramImage"
+        app:layout_constraintVertical_bias="0.104">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/minusInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:baselineAligned="false"
+            android:imeOptions="actionDone"
+            android:inputType="numberDecimal|numberSigned"
+            android:paddingBottom="15dp"
+            android:textAlignment="textStart" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nominalTextLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="115dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="10dp"
+        android:hint="@string/nominal"
+        android:inputType="numberDecimal|numberSigned"
+        android:orientation="vertical"
+        app:errorEnabled="true"
+        app:errorTextColor="@color/design_default_color_error"
+        app:hintAnimationEnabled="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/plusTextLayout"
+        app:layout_constraintHorizontal_bias="0.26"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DiagramImage"
+        app:layout_constraintVertical_bias="0.106">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nominalInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@null"
+            android:baselineAligned="false"
+            android:imeOptions="actionDone"
+            android:inputType="numberDecimal|numberSigned"
+            android:paddingBottom="15dp"
+            android:textAlignment="textStart" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/heightTextLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="115dp"
+        android:layout_height="64dp"
+        android:hint="@string/height_from_surface"
+        android:inputType="numberDecimal|numberSigned"
+        android:orientation="vertical"
+        app:errorContentDescription="Required"
+        app:errorEnabled="false"
+        app:errorTextColor="@color/design_default_color_error"
+        app:hintAnimationEnabled="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.054"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DiagramImage"
+        app:layout_constraintVertical_bias="0.372">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/heightInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:baselineAligned="false"
+            android:imeOptions="actionDone"
+            android:inputType="numberDecimal|numberSigned"
+            android:paddingBottom="15dp"
+            android:textAlignment="textStart" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ballLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="135dp"
+        android:layout_height="64dp"
+        android:hint="@string/ballsize"
+        app:errorIconDrawable="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.536"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DiagramImage"
+        app:layout_constraintVertical_bias="0.372">
+
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteBallSize"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:inputType="none"
+            android:paddingBottom="15dp"
+            app:errorIconDrawable="@null"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

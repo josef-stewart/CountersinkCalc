@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">Countersink Calculator</string>
+    <string name="gage_ball_diameter">Gage Ball Diameter</string>
+    <string name="height_from_surface">Height</string>
+    <string name="countersink_details">Countersink Characteristics</string>
+    <string name="measurement">Measurement Details</string>
+    <string name="calculate">CALCULATE</string>
+    <string name="reset">RESET</string>
+    <string name="nominal">Nominal</string>
+    <string name="plus">Tol. (+)</string>
+    <string name="minus">Tol. (-)</string>
+    <string name="ballsize">Ball Size</string>
+    <string name="finalResult">Calculated Diameter</string>
+    <string name="out_of_tolerance">* Result is out of specified tolerance!</string>
+    <string name="info">Note: Gage Ball used should measure at least 2X the nominal countersink diameter being measured.</string>
+
+    <string-array name="ball_sizes">
+        <item>1/8</item>
+        <item>9/64</item>
+        <item>5/32</item>
+        <item>3/16</item>
+        <item>7/32</item>
+        <item>1/4</item>
+        <item>9/32</item>
+        <item>5/16</item>
+        <item>11/32</item>
+        <item>3/8</item>
+        <item>13/32</item>
+        <item>7/16</item>
+        <item>15/32</item>
+        <item>1/2</item>
+        <item>17/32</item>
+        <item>9/16</item>
+        <item>19/32</item>
+        <item>5/8</item>
+        <item>21/32</item>
+        <item>11/16</item>
+        <item>23/32</item>
+        <item>3/4</item>
+        <item>13/16</item>
+        <item>7/8</item>
+        <item>15/16</item>
+        <item>1</item>
+
+    </string-array>
+
+</resources>
